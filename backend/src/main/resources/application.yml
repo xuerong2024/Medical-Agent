@@ -1,0 +1,26 @@
+server:
+  address: ${SERVER_ADDRESS:127.0.0.1}
+  port: ${PORT:8080}
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:h2:file:./data/agent;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE}
+    username: ${DB_USER:sa}
+    password: ${DB_PASSWORD:}
+  servlet:
+    multipart:
+      max-file-size: 256MB
+      max-request-size: 257MB
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+agent:
+  worker-url: ${WORKER_URL:http://127.0.0.1:8090}
+  api-key: ${LLM_API_KEY:}
+  base-url: ${LLM_BASE_URL:https://api.openai.com}
+  model: ${LLM_MODEL:gpt-4o-mini}
+  disable-thinking: ${LLM_DISABLE_THINKING:false}
+  timeout-seconds: ${TASK_TIMEOUT_SECONDS:1800}
+  embedding-url: ${EMBEDDING_BASE_URL:}
+  embedding-key: ${EMBEDDING_API_KEY:}
+  embedding-model: ${EMBEDDING_MODEL:text-embedding-3-small}
+  vector-enabled: ${VECTOR_ENABLED:false}

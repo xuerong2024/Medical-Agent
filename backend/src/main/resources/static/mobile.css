@@ -1,0 +1,8 @@
+/* Narrow side-panel / phone layout: keep navigation readable without horizontal overflow. */
+@media(max-width:650px){
+  .sidebar{gap:6px}
+  .nav{gap:0;font-size:0;padding:9px 7px}
+  .nav span{font-size:11px;white-space:nowrap}
+  .stats td,.stats th{padding:8px 5px;font-size:10px}
+  .footnote{overflow-wrap:anywhere}
+}
