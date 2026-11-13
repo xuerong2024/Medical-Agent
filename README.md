@@ -20,7 +20,7 @@
 
 ## 实测演示
 
-![MedAtlas 聊天界面：公开 CT 的四器官体积表、三视图叠加与引用入口](docs/chat-ui.jpg)
+![MedAtlas 聊天界面：公开 CT 的四器官体积表和三视图叠加](docs/chat-ui.png)
 
 > **公开 CT 端到端验收** · `deepseek-v4.1-flash` 通过 Spring AI 依次调用影像检查、TotalSegmentator 分割和知识检索。CPU fast 分割阶段耗时 **44.03 秒**，生成 **4 份器官掩膜、3 张叠加预览和 3 条来源引用**。耗时来自一次公开小样例运行，实际速度取决于影像与硬件。
 
